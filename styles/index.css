@@ -88,6 +88,7 @@
   width: 38px;
   border-radius: 50%;
   background-color: var(--color-light-gray-blue);
+  cursor: pointer;
 }
 
 .article-preview-share-box div {
