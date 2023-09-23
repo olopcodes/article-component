@@ -1,0 +1,122 @@
+@import "./base.css";
+
+.article-preview-container {
+  background-color: var(--color-light);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  box-shadow: 0px 5px 15px rgba(109, 127, 151, 0.3);
+}
+
+.article-preview-text,
+.article-preview-author-box {
+  padding: 1.5rem;
+}
+
+.article-preview-author {
+  position: relative;
+}
+
+.article-preview-author-box {
+  display: grid;
+  gap: 0.3rem 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  color: var(--color-gray-blue);
+}
+
+.article-preview-author-box img {
+  border-radius: 50%;
+  width: 60px;
+}
+
+.article-preview-author-box-text {
+  grid-column: span 2;
+}
+
+.article-preview-author-box h4 {
+  margin: 0;
+  color: var(--color-gray-blue-primary);
+}
+
+.article-preview-author-box p {
+  grid-column: 2 / span 2;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.article-preview-author-box-share {
+  grid-row: 1;
+  grid-column: 4 / -1;
+  align-self: center;
+}
+
+.article-preview-author-box-share img,
+.article-preview-share-box img {
+  width: 16px;
+}
+
+.article-preview-share-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-gray-blue-primary);
+  display: grid;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  color: var(--color-light-gray-blue);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  opacity: 0;
+  transform: translateY(200%);
+  transition: all 0.35s ease;
+}
+
+.article-preview-author-box-share,
+.article-preview-share-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background-color: var(--color-light-gray-blue);
+}
+
+.article-preview-share-box div {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 420px) {
+  .article-preview-text,
+  .article-preview-author-box {
+    padding: 3rem;
+  }
+
+  .article-preview-author-box {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .article-preview-container {
+    display: flex;
+  }
+
+  .article-preview-img img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .article-preview-text,
+  .article-preview-author-box {
+    padding: 1.5rem;
+  }
+}
